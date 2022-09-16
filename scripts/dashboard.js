@@ -1,5 +1,5 @@
 (() => {
-  let token = localStorage.token
-  if (!token || token == undefined) location.replace('login.html')
-  else location.replace('/')
+  let token = localStorage.userToken
+  // if (!token || token == undefined) location.replace('login.html')
+  // else location.replace('/')
 })()

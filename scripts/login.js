@@ -12,15 +12,13 @@ login_button.addEventListener('click', async (e) => {
     method: 'post',
     url: 'https://trustpaddi-waitlist.herokuapp.com/admin/signin',
     data: {
-      email,
-      password
+      email: email.value,
+      password: password.value
     }
   })
 
   console.log(user)
 
-  // localStorage.token = data.token;
-  // localStorage.user = data.user._id;
-  // localStorage.email = data.user.email
-  // window.location.href = "dashboard/";
+  localStorage.userToken = user.data.token;
+  window.location.href = "/";
 })

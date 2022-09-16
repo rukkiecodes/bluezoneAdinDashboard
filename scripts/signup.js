@@ -20,6 +20,6 @@ signup_button.addEventListener('click', async (e) => {
   })
 
   
-  localStorage.user = user.data.user
+  localStorage.user = JSON.stringify(user.data.user)
   location.replace('login.html')
 })
