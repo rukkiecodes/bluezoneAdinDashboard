@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>Transactions</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <link rel="icon" type="image/png" href="assets/img/bluezone logo.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/bluezone logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="__manifest.json">
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <img src="assets/img/bluezone logo.png" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+    <div class="main__container-t">
+        <div class="side-div-t p-0">
+            <!-- profile box -->
+            <div class="profileBox pt-2 pb-2" style="     margin-bottom: 5em;
+            margin-top: 2.5em;">
+            <div class="image-wrapper">
+                <img src="assets/img/DP..png" alt="image" class="imaged  w36 rounded">
+            </div>
+            <div class="in">
+                <div class="text-muted">Welcome back</div>
+                <strong>Admin</strong>
+            </div>
+        </div>
+        <!-- * profile box -->
+        <!-- balance -->
+        <!-- <div class="sidebar-balance"> -->
+        <!-- <div class="listview-title">Balance</div> -->
+        <!-- <div class="in"> -->
+        <!-- <h1 class="amount">$ 2,562.50</h1> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- * balance -->
+        <!-- menu -->
+
+        <ul class="listview flush transparent no-line image-listview" style="border-radius:10px">
+            <li>
+                <a href="./index.html" class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="pie-chart-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        Dashboard
+
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="transactions.html" class="item" >
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="swap-vertical"></ion-icon>
+                    </div>
+                    <div class="in">
+                       All Transactions
+
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="withdrawals.html" class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        Withdraw Request
+
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="pending-transactions.html" class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="card-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                       Pending Transactions
+
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="copytrade.html" class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="star-half-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                       Create Trader
+
+                    </div>
+                </a>
+            </li>
+           
+            <li>
+                <a href="" class="item">
+                    <div class="icon-box bg-danger">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        Log out
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <!-- * menu -->
+
+
+
+
+        </div>
+
+        <div class="side-right-div">
+            <div>
+
+
+                <!-- App Header -->
+                <div class="appHeader">
+                    <div class="left">
+                        <a href="#" class="headerButton goBack">
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="pageTitle">
+                      Create  trader
+                    </div>
+                    <div class="right">
+
+
+
+                    </div>
+                </div>
+                <!-- * App Header -->
+
+
+                <!-- App Capsule -->
+                <div id="appCapsule">
+                    <div class="section mt-2 mb-2">
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <form>
+
+                                    
+
+                                    <div class="form-group boxed">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="Name">Name</label>
+                                            <input type="text" class="form-control" id="name" placeholder="Name">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="section mt-3">
+                                      
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group boxed">
+                                                    <form>
+                                                        <div class="custom-file-upload" id="fileUpload1" style="height:20vh ;">
+                                                            <input type="file" id="fileuploadInput" accept=".png, .jpg, .jpeg">
+                                                            <label for="fileuploadInput">
+                                                                <span>
+                                                                    <strong>
+                                                                        <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                                                                        <i>Upload a image</i>
+                                                                    </strong>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group boxed">
+                                                    <div class="input-wrapper">
+                                                        <label class="label" for="Wins">Wins</label>
+                                                        <input type="number" class="form-control" id="wins" placeholder="Wins">
+                                                        <i class="clear-input">
+                                                            <ion-icon name="close-circle"></ion-icon>
+                                                        </i>
+                                                    </div>
+                                                </div>
+                        
+
+                                                <div class="form-group boxed">
+                                                    <div class="input-wrapper">
+                                                        <label class="label" for="Losses">Losses</label>
+                                                        <input type="number" autocomplete="off" class="form-control" id="losses"
+                                                            placeholder="Losses">
+                                                        <i class="clear-input">
+                                                            <ion-icon name="close-circle"></ion-icon>
+                                                        </i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                   
+            
+                                   
+            
+                                    <div class="form-group boxed">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="Rate">Rate</label>
+                                            <input type="number" class="form-control" id="rate" placeholder="Rate">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group boxed">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="Rate">Profit</label>
+                                            <input type="number" class="form-control" id="profit" placeholder="Profit">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+            
+                                   
+                                </form>
+            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                       
+                        <button id="copy" class="btn btn-primary  button" style="width: 100%; height: 56px;">
+                          Create
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side-div-l">
+            <div class="card card-with-icon" style="top: 10em ;">
+                <div class="card-body pt-3 pb-3 text-center">
+                    <div class="card-icon bg-success mb-2">
+                        <ion-icon name="link"></ion-icon>
+                    </div>
+                    <h3 class="card-titlde mb-1">Refer a Friend</h3>
+                    <p>Invite your friends and earn prizes!</p>
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="btn btn-secondary">
+                                <ion-icon name="copy-outline"></ion-icon>
+                                Invite now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-with-icon" style="top:12.5em ;">
+                <div class="card-body pt-3 pb-3 text-center">
+                    <div class="card-icon bg-secondary mb-2">
+                        <ion-icon name="share-social-outline"></ion-icon>
+                    </div>
+                    <h3 class="card-titlde mb-1">Follow Us</h3>
+                    <p>Follow us on social media!</p>
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="btn btn-block btn-facebook">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                                Facebook
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-block btn-twitter">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                                Twitter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- * Copytrate notification -->
+        <div id="notification-6" class="notification-box">
+            <div class="notification-dialog ios-style  bg-success">
+                <div class="notification-content">
+                    <div class="in">
+                        <h3 class="subtitle">Copytrate created.</h3>
+                        <div class="text">
+                            Copytrate has successfully been created.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- * Copytrate notification -->
+
+
+        <!-- ========= JS Files =========  -->
+        <!-- axios -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+        <!-- Ionicons -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!-- Splide -->
+        <script src="assets/js/plugins/splide/splide.min.js"></script>
+        <!-- Apex Charts -->
+        <script src="assets/js/plugins/apexcharts/apexcharts.min.js"></script>
+        <!-- Base Js File -->
+        <script src="assets/js/base.js"></script>
+        <script src="./scripts/copytrade.js"></script>
+
+
+</body>
+
+</html>
