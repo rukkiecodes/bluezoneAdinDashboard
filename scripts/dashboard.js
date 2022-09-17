@@ -1,7 +1,7 @@
 const token = localStorage.userToken;
 const total_number_of_users = document.querySelector('.total_number_of_users');
 const transac = document.querySelector('.transactions_list');
-const all_transactions_list = document.querySelector('.all_transactions_list');
+const all_transactions_list = document.querySelector('.all_transactions_list')
 
 // count all registrd usrs
 if (total_number_of_users)
