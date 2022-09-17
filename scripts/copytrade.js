@@ -27,19 +27,20 @@ copy_button.addEventListener('click', async () => {
     data: formData,
     headers: { 'Content-Type': 'multipart/form-data' }
   })
-console.log(formData)
-Toastify({
-  text: "Trader sucessfully created.",
-  duration: 3000,
-  newWindow: true,
-  className:"bg-success",
-  close: false,
-  gravity: "top", // `top` or `bottom`
-  position: "right", // `left`, `center` or `right`
-  stopOnFocus: true, // Prevents dismissing of toast on hover
-  style: {
-    background: "green",
-    width:"20em"
-  },
-}).showToast();
+
+  notification('notification-6', 3000)
+  // Toastify({
+  //   text: "Trader sucessfully created.",
+  //   duration: 3000,
+  //   newWindow: true,
+  //   className: "bg-success",
+  //   close: false,
+  //   gravity: "top", // `top` or `bottom`
+  //   position: "right", // `left`, `center` or `right`
+  //   stopOnFocus: true, // Prevents dismissing of toast on hover
+  //   style: {
+  //     background: "green",
+  //     width: "20em"
+  //   },
+  // }).showToast();
 })
