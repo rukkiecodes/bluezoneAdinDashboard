@@ -77,20 +77,21 @@ if (transac)
   })();
 
 // get all transactions
-(async () => {
-  const response = await axios({
-    method: 'post',
-    url: 'https://trustpaddi-waitlist.herokuapp.com/admin/get',
-    headers: { 'Authorization': `Bearer ${token}` }
-  })
+if (all_transactions_list)
+  (async () => {
+    const response = await axios({
+      method: 'post',
+      url: 'https://trustpaddi-waitlist.herokuapp.com/admin/get',
+      headers: { 'Authorization': `Bearer ${token}` }
+    })
 
-  let _transactions = response.data.transactions
+    let _transactions = response.data.transactions
 
-  console.log('_transactions: ', _transactions)
+    console.log('_transactions: ', _transactions)
 
-  if (_transactions.length > 0) {
-    _transactions.forEach(i => {
-      all_transactions_list.innerHTML += `
+    if (_transactions.length > 0) {
+      _transactions.forEach(i => {
+        all_transactions_list.innerHTML += `
                             <li>
                                 <a href="#" class="item">
                                     <div class="icon-box">
@@ -111,9 +112,9 @@ if (transac)
                                     </div>
                                 </a>
                             </li>`
-    })
-  } else {
-    all_transactions_list .innerHTML += ` <div class="section mt-2"
+      })
+    } else {
+      all_transactions_list.innerHTML += ` <div class="section mt-2"
                     style=" margin: 35%; position: relative; top:5vh; text-align: center;">
 
                     <div class="">
@@ -135,5 +136,5 @@ if (transac)
                         <div class="" style="font-size: 0.8rem ;">No transactions yet</div>
                     </div>
                 </div> `
-  }
-})()
+    }
+  })()
