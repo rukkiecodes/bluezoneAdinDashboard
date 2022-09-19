@@ -16,13 +16,13 @@ if (withdraw_list)
       withdraw_list.innerHTML += `<a  class="item">
                             <div class="detail">
                               <div id="_id" style="display: none">${withdraw._id}</div>
-                                <strong>Peter Obi</strong>
-                                <p style="margin-left: 5px; margin-top: -5px">${new Date(withdraw.createdAt).getDate()}/${new Date(withdraw.createdAt).getMonth()}/${new Date(withdraw.createdAt).getFullYear()}</p>
+                                <strong>${withdraw.name}</strong>
+                                <p style="margin-left: 5px; margin-top: -5px">${withdraw.time}</p>
                               </div>
                             </div>
                             <div class="right">
                               <div class="price text-danger"> $ ${withdraw.amount}</div>
-                              <button type="button" class="btn ${withdraw.status == 'PENDING' ? 'btn-success' : 'btn-dark'} btn-sm me-1 mt-2 withdraw_button">${withdraw.status == 'PENDING' ? 'Confirm' : 'Confirmed'}</button>
+                              <button type="button" class="btn ${withdraw.status == 'PENDING' ? 'btn-warning' : 'btn-success'} btn-sm me-1 mt-2 withdraw_button">${withdraw.status == 'PENDING' ? 'Confirm' : 'Confirmed'}</button>
                             </div>
                           </a>`;
       let btns = document.querySelectorAll('.withdraw_button');
