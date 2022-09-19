@@ -20,5 +20,6 @@ login_button.addEventListener('click', async (e) => {
   console.log(user)
 
   localStorage.userToken = user.data.token;
+  localStorage.token = user.data.token;
   window.location.href = "/";
 })

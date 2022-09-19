@@ -5,7 +5,7 @@ const losses = document.querySelector('#losses')
 const rate = document.querySelector('#rate')
 const profit = document.querySelector('#profit')
 const copy_button = document.querySelector('#copy')
-const token = localStorage.token
+const { userToken } = localStorage
 
 let file
 image.addEventListener('change', (e) => {
@@ -29,18 +29,4 @@ copy_button.addEventListener('click', async () => {
   })
 
   notification('notification-6', 3000)
-  // Toastify({
-  //   text: "Trader sucessfully created.",
-  //   duration: 3000,
-  //   newWindow: true,
-  //   className: "bg-success",
-  //   close: false,
-  //   gravity: "top", // `top` or `bottom`
-  //   position: "right", // `left`, `center` or `right`
-  //   stopOnFocus: true, // Prevents dismissing of toast on hover
-  //   style: {
-  //     background: "green",
-  //     width: "20em"
-  //   },
-  // }).showToast();
 })

@@ -22,14 +22,14 @@ let btns = document.querySelectorAll('.transaction_button');
 
 for (i of btns) {
   i.addEventListener('click', async function () {
-    const token = localStorage.token
+    const { userToken } = localStorage
     let transaction = this.parentNode.parentNode
     let _id = transaction.querySelector('#_id').innerText
 
     await axios({
       method: 'post',
       url: 'https://trustpaddi-waitlist.herokuapp.com/admin/confirmTransactionRequest',
-      headers: { 'Authorization': `Bearer ${token}` },
+      headers: { 'Authorization': `Bearer ${userToken}` },
       data: { _id }
     })
 
