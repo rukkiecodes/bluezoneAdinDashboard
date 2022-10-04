@@ -56,15 +56,6 @@ const usersList = document.querySelector('.usersList');
       document.querySelector('#country').innerText = _country
       document.querySelector('#investmenmts').innerText = _investment
       document.querySelector('#earnings').innerText = _earnings
-
-      // await axios({
-      //   method: 'post',
-      //   url: 'https://trustpaddi-waitlist.herokuapp.com/admin/confirmTransactionRequest',
-      //   headers: { 'Authorization': `Bearer ${userToken}` },
-      //   data: { _id }
-      // })
-
-      // notification('notification-6transaction', 3000)
     });
   }
 })();
