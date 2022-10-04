@@ -2,7 +2,6 @@ const transaction_list = document.querySelector('.transaction_list')
 const allTransactions = [];
 
 allTransactions.forEach((transaction, index) => {
-  console.log(allTransactions)
   transaction_list.innerHTML += `<a class="item">
                                 <div class="detail">
                                     <div>

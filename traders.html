@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title> Trader</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <link rel="icon" type="image/png" href="assets/img/bluezone logo.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/bluezone logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="manifest" href="__manifest.json">
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <img src="assets/img/bluezone logo.png" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+    <div class="main__container-t">
+        <div class="side-div-t p-0">
+            <!-- profile box -->
+            <div class="profileBox pt-2 pb-2" style=" margin-bottom: 5em; margin-top: 2.5em;">
+                <div class="image-wrapper">
+                    <img src="assets/img/DP..png" alt="image" class="imaged  w36 rounded">
+                </div>
+                <div class="in">
+                    <div class="text-muted">Welcome back</div>
+                    <strong>Admin</strong>
+                </div>
+            </div>
+
+            <ul class="listview flush transparent no-line image-listview" style="border-radius:10px">
+                <li>
+                    <a href="/" class="item">
+                        <div class="icon-box bg-primary">
+                            <ion-icon name="pie-chart-outline"></ion-icon>
+                        </div>
+                        <div class="in">Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="transactions.html" class="item">
+                        <div class="icon-box bg-primary">
+                            <ion-icon name="swap-vertical"></ion-icon>
+                        </div>
+                        <div class="in">All Transactions</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="withdrawals.html" class="item">
+                        <div class="icon-box bg-primary">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </div>
+                        <div class="in">Withdraw Request</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="pending-transactions.html" class="item">
+                        <div class="icon-box bg-primary">
+                            <ion-icon name="card-outline"></ion-icon>
+                        </div>
+                        <div class="in">Pending Transactions</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="copytrade.html" class="item">
+                        <div class="icon-box bg-primary">
+                            <ion-icon name="star-half-outline"></ion-icon>
+                        </div>
+                        <div class="in">Create Trader</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html" class="item">
+                        <div class="icon-box bg-danger">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </div>
+                        <div class="in">Log out</div>
+                    </a>
+                </li>
+            </ul>
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="side-right-div">
+            <div>
+
+
+                <!-- App Header -->
+                <div class="appHeader">
+                    <div class="left">
+                        <a href="#" class="headerButton goBack">
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="pageTitle">
+                        Trader Moniitor
+                    </div>
+                    <div class="right">
+
+
+
+                    </div>
+                </div>
+                <!-- * App Header -->
+
+
+                <!-- App Capsule -->
+                <div id="appCapsule">
+
+
+
+
+                    <!-- <div class="listview-title mt-2">Media Link Listview Inset</div> -->
+                    <ul class="listview image-listview media inset mb-3 copy_list" style="margin-top:6em ;">
+                        <li>
+                            <div class="item">
+                                <div class="imageWrapper">
+                                    <img src="./assets/img/bluezone logo.png" alt="image" class="imaged w64 rounded"
+                                        style="height:64px">
+                                </div>
+                                <div class="in" style="  position: relative;     top: 10px; ">
+                                    <div>
+                                        <div class="_id" style="display: none"></div>
+                                        <div class="tradersName">Trader name</div>
+                                        <div style="display:flex" class="text-small">
+
+                                            <p>
+                                                EURUSD
+                                            <p>,
+                                            <p style="color:red">200.00</p>
+                                        </div>
+                                        <div class="text-muted " style=" margin-bottom: 5%;">1.3673 &#x2192; 10837</div>
+                                    </div>
+                                    <span class="" style=" position: relative;    top: -15px;">
+                                        <button type="button"
+                                            class="btn btn-success btn-sm me-1 mt-2 " data-bs-toggle="modal" data-bs-target="#UpdateForm">VIEW</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <div class="imageWrapper">
+                                    <img src="./assets/img/bluezone logo.png" alt="image" class="imaged w64 rounded"
+                                        style="height:64px">
+                                </div>
+                                <div class="in" style="  position: relative;     top: 10px; ">
+                                    <div>
+                                        <div class="_id" style="display: none"></div>
+                                        <div class="tradersName">Trader name</div>
+                                        <div style="display:flex" class="text-small">
+
+                                            <p>
+                                                EURUSD
+                                            <p>,
+                                            <p style="color:red">200.00</p>
+                                        </div>
+                                        <div class="text-muted " style=" margin-bottom: 5%;">1.3673 &#x2192; 10837</div>
+                                    </div>
+                                    <span class="" style=" position: relative;    top: -15px;">
+                                        <button type="button" class="btn btn-success btn-sm me-1 mt-2 "
+                                            data-bs-toggle="modal" data-bs-target="#UpdateForm">VIEW</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <div class="imageWrapper">
+                                    <img src="./assets/img/bluezone logo.png" alt="image" class="imaged w64 rounded"
+                                        style="height:64px">
+                                </div>
+                                <div class="in" style="  position: relative;     top: 10px; ">
+                                    <div>
+                                        <div class="_id" style="display: none"></div>
+                                        <div class="tradersName">Trader name</div>
+                                        <div style="display:flex" class="text-small">
+
+                                            <p>
+                                                EURUSD
+                                            <p>,
+                                            <p style="color:green">200.00</p>
+                                        </div>
+                                        <div class="text-muted " style=" margin-bottom: 5%;">1.3673 &#x2192; 10837</div>
+                                    </div>
+                                    <span class="" style=" position: relative;    top: -15px;">
+                                        <button type="button"
+                                            class="btn btn-success btn-sm me-1 mt-2 ">VIEW</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="side-div-l">
+            <div class="card card-with-icon" style="top: 10em ;">
+                <div class="card-body pt-3 pb-3 text-center">
+                    <div class="card-icon bg-success mb-2">
+                        <ion-icon name="link"></ion-icon>
+                    </div>
+                    <h3 class="card-titlde mb-1">Refer a Friend</h3>
+                    <p>Invite your friends and earn prizes!</p>
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="btn btn-secondary">
+                                <ion-icon name="copy-outline"></ion-icon>
+                                Invite now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-with-icon" style="top:12.5em ;">
+                <div class="card-body pt-3 pb-3 text-center">
+                    <div class="card-icon bg-secondary mb-2">
+                        <ion-icon name="share-social-outline"></ion-icon>
+                    </div>
+                    <h3 class="card-titlde mb-1">Follow Us</h3>
+                    <p>Follow us on social media!</p>
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="btn btn-block btn-facebook">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                                Facebook
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-block btn-twitter">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                                Twitter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Dialog Form -->
+        <div class="modal fade dialogbox" id="UpdateForm" data-bs-backdrop="static" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Update Trader result</h5>
+                    </div>
+                    <form>
+                        <ul class="listview image-listview media inset mb-3 ">
+                            <li>
+                                <div class="item">
+                                    <div class="imageWrapper">
+                                        <img src="./assets/img/bluezone logo.png" alt="image" class="imaged w64 rounded"
+                                            style="height:64px">
+                                    </div>
+                                    <div class="in">
+                                        <div>
+                                            <div class="_id" style="display: none"></div>
+                                            <div class="tradersName">Trader name</div>
+
+
+                                        </div>
+
+                                    </div>
+                            </li>
+                        </ul>
+                        <div class="modal-body text-start mb-2">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="account1">BUY/SELL</label>
+                                            <select class="form-control custom-select" id="account1">
+                                                <option value="sell" class="text-danger">SELL</option>
+                                                <option value="buy" class="text-sucess">BUY</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="input-info">Select a bank buy or sell</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="account1">PROFIT/LOSS</label>
+                                            <select class="form-control custom-select" id="account1">
+                                                <option value="profit">PROFIT</option>
+                                                <option value="loss">LOSS</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="input-info">Select a profit or loss</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="account1">From</label>
+                                            <input type="number" class="form-control" id="" value="1.0037">
+                                        </div>
+                      
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="account1">To</label>
+                                            <input type="number" class="form-control" id="" value="1.0837">
+                                        </div>
+                              
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label" for="text1">Enter Currency</label>
+                                    <input type="text" class="form-control" id="text1" value="EURUSD">
+                                    <i class="clear-input">
+                                        <ion-icon name="close-circle"></ion-icon>
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label" for="text1">Enter Amount</label>
+                                    <input type="text" class="form-control" id="text1" value="100">
+                                    <i class="clear-input">
+                                        <ion-icon name="close-circle"></ion-icon>
+                                    </i>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-inline">
+                                <button type="button" class="btn btn-text-secondary"
+                                    data-bs-dismiss="modal">CANCEL</button>
+                                <button type="button" class="btn btn-text-primary"
+                                    data-bs-dismiss="modal">UPDATE</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- * Dialog Form -->-->
+
+
+        <!-- ========= JS Files =========  -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <!-- axios -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+        <!-- Ionicons -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!-- Splide -->
+        <script src="assets/js/plugins/splide/splide.min.js"></script>
+        <!-- Apex Charts -->
+        <script src="assets/js/plugins/apexcharts/apexcharts.min.js"></script>
+        <!-- Base Js File -->
+        <script src="assets/js/base.js"></script>
+        <!-- <script src="./scripts/profile.js"></script> -->
+
+</body>
+
+</html>
