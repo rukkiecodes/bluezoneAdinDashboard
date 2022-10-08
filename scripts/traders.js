@@ -51,12 +51,6 @@ const usersList = document.querySelector('.copiesList');
 
       let _id = copy.querySelector('#_id').innerText;
       let _name = copy.querySelector('#_name').innerText;
-      let _bankState = copy.querySelector('#_bankState').innerText
-      let _salesState = copy.querySelector('#_salesState').innerText
-      let _from = copy.querySelector('#_from').innerText
-      let _to = copy.querySelector('#_to').innerText
-      let _currency = copy.querySelector('#_currency').innerText
-      let _amount = copy.querySelector('#_amount').innerText
 
       document.querySelector('#tradersName').innerText = _name
       const tradersName = document.querySelector('#tradersName')
@@ -94,7 +88,8 @@ const usersList = document.querySelector('.copiesList');
             from: from.value,
             to: to.value,
             currency: currency.value,
-            amount: amount.value
+            amount: amount.value,
+            earnings: salesStateValue == 'profit' ? amount.value * 2 : amount.value
           }
         })
       })
