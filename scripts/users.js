@@ -1,6 +1,15 @@
 const { userToken } = localStorage;
 const usersList = document.querySelector('.usersList');
 
+let user;
+let _id;
+let _name;
+let _email;
+let _phone;
+let _country;
+let _investment;
+let _earnings;
+
 (async () => {
   const users = await axios({
     method: 'get',
@@ -41,21 +50,38 @@ const usersList = document.querySelector('.usersList');
   for (i of btns) {
     i.addEventListener('click', async function () {
       const { userToken } = localStorage
-      let user = this.parentNode.parentNode.parentNode
-      let _id = user.querySelector('#_id').innerText
-      let _name = user.querySelector('#_name').innerText
-      let _email = user.querySelector('#_email').innerText
-      let _phone = user.querySelector('#_phone').innerText
-      let _country = user.querySelector('#_country').innerText
-      let _investment = user.querySelector('#_investment').innerText
-      let _earnings = user.querySelector('#_earnings').innerText
+      user = this.parentNode.parentNode.parentNode
+      _id = user.querySelector('#_id').innerText
+      _name = user.querySelector('#_name').innerText
+      _email = user.querySelector('#_email').innerText
+      _phone = user.querySelector('#_phone').innerText
+      _country = user.querySelector('#_country').innerText
+      _investment = user.querySelector('#_investment').innerText
+      _earnings = user.querySelector('#_earnings').innerText
 
       document.querySelector('#username').innerText = _name
       document.querySelector('#email').innerText = _email
       document.querySelector('#phone').innerText = _phone
       document.querySelector('#country').innerText = _country
       document.querySelector('#investmenmts').innerText = _investment
-      document.querySelector('#earnings').innerText = _earnings
+      document.querySelector('#earnings').value = _earnings
     });
   }
 })();
+
+const earningsInput = document.querySelector('#earnings');
+
+earningsInput.addEventListener("keypress", async function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    await axios({
+      method: 'post',
+      url: 'https://trustpaddi-waitlist.herokuapp.com/admin/updateEarnings',
+      data: {
+        email: _email,
+        earnings: parseFloat(earningsInput.value)
+      }
+    })
+    document.querySelector('.closeButton').click()
+  }
+});
