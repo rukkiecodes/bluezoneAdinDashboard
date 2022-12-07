@@ -27,7 +27,7 @@ for (i of btns) {
 
     await axios({
       method: 'post',
-      url: 'https://trustpaddi-waitlist.herokuapp.com/admin/confirmTransactionRequest',
+      url: 'https://web-production-09d2.up.railway.app/admin/confirmTransactionRequest',
       headers: { 'Authorization': `Bearer ${userToken}` },
       data: { _id }
     })

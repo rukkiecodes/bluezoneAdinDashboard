@@ -6,7 +6,7 @@ if (withdraw_list)
   (async () => {
     const response = await axios({
       method: 'post',
-      url: 'https://trustpaddi-waitlist.herokuapp.com/admin/withdrawRequest',
+      url: 'https://web-production-09d2.up.railway.app/admin/withdrawRequest',
       headers: { 'Authorization': `Bearer ${userToken}` }
     })
 
@@ -38,7 +38,7 @@ if (withdraw_list)
 
           await axios({
             method: 'post',
-            url: 'https://trustpaddi-waitlist.herokuapp.com/admin/confirmWithdrawRequest',
+            url: 'https://web-production-09d2.up.railway.app/admin/confirmWithdrawRequest',
             headers: { 'Authorization': `Bearer ${userToken}` },
             data: { _id }
           })

@@ -11,7 +11,7 @@ signup_button.addEventListener('click', async (e) => {
 
   let user = await axios({
     method: 'post',
-    url: 'https://trustpaddi-waitlist.herokuapp.com/admin/signup',
+    url: 'https://web-production-09d2.up.railway.app/admin/signup',
     data: {
       name: _name.value,
       email: email.value,

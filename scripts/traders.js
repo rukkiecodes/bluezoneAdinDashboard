@@ -4,7 +4,7 @@ const usersList = document.querySelector('.copiesList');
 (async () => {
   const users = await axios({
     method: 'get',
-    url: 'https://trustpaddi-waitlist.herokuapp.com/admin/allCopies',
+    url: 'https://web-production-09d2.up.railway.app/admin/allCopies',
     headers: { 'Authorization': `Bearer ${userToken}` }
   });
 
@@ -79,7 +79,7 @@ const usersList = document.querySelector('.copiesList');
 
         await axios({
           method: 'post',
-          url: 'https://trustpaddi-waitlist.herokuapp.com/admin/editCopy',
+          url: 'https://web-production-09d2.up.railway.app/admin/editCopy',
           data: {
             _id,
             tradersName: tradersName.innerText,

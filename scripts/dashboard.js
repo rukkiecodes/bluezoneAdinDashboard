@@ -8,7 +8,7 @@ if (total_number_of_users)
   (async () => {
     const users = await axios({
       method: 'get',
-      url: 'https://trustpaddi-waitlist.herokuapp.com/admin/allUsers',
+      url: 'https://web-production-09d2.up.railway.app/admin/allUsers',
       headers: { 'Authorization': `Bearer ${userToken}` }
     })
     total_number_of_users.innerText = users.data.users.length
@@ -19,7 +19,7 @@ if (transac)
   (async () => {
     const response = await axios({
       method: 'post',
-      url: 'https://trustpaddi-waitlist.herokuapp.com/admin/get',
+      url: 'https://web-production-09d2.up.railway.app/admin/get',
       headers: { 'Authorization': `Bearer ${userToken}` }
     })
 
@@ -67,7 +67,7 @@ if (all_transactions_list)
   (async () => {
     const response = await axios({
       method: 'post',
-      url: 'https://trustpaddi-waitlist.herokuapp.com/admin/get',
+      url: 'https://web-production-09d2.up.railway.app/admin/get',
       headers: { 'Authorization': `Bearer ${userToken}` }
     })
 

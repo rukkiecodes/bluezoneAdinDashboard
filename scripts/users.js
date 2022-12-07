@@ -13,7 +13,7 @@ let _earnings;
 (async () => {
   const users = await axios({
     method: 'get',
-    url: 'https://trustpaddi-waitlist.herokuapp.com/admin/allUsers',
+    url: 'https://web-production-09d2.up.railway.app/admin/allUsers',
     headers: { 'Authorization': `Bearer ${userToken}` }
   })
 
@@ -76,7 +76,7 @@ earningsInput.addEventListener("keypress", async function (event) {
     event.preventDefault();
     await axios({
       method: 'post',
-      url: 'https://trustpaddi-waitlist.herokuapp.com/admin/updateEarnings',
+      url: 'https://web-production-09d2.up.railway.app/admin/updateEarnings',
       data: {
         email: _email,
         earnings: parseFloat(earningsInput.value)

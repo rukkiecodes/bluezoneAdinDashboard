@@ -6,7 +6,7 @@ if (all_transactions_list)
         const { userToken } = localStorage
         const response = await axios({
             method: 'get',
-            url: 'https://trustpaddi-waitlist.herokuapp.com/admin/getPendingTransactions',
+            url: 'https://web-production-09d2.up.railway.app/admin/getPendingTransactions',
             headers: { 'Authorization': `Bearer ${userToken}` }
         })
 

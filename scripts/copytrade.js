@@ -23,7 +23,7 @@ copy_button.addEventListener('click', async () => {
 
   await axios({
     method: 'post',
-    url: 'https://trustpaddi-waitlist.herokuapp.com/admin/creatCopy',
+    url: 'https://web-production-09d2.up.railway.app/admin/creatCopy',
     data: formData,
     headers: { 'Content-Type': 'multipart/form-data' }
   })

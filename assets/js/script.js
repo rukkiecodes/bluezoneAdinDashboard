@@ -7,7 +7,7 @@ $('#depo').click(function () {
         
         mode: 'cors',
         type: 'POST',
-        url: 'https://trustpaddi-waitlist.herokuapp.com/deposit/add',
+        url: 'https://web-production-09d2.up.railway.app/deposit/add',
         contentType: 'application/json',
         headers:{
             Authorization: 'Bearer'  + localStorage.token
@@ -31,7 +31,7 @@ $('#depo').click(function () {
     var password = $("#password").val();
     $.ajax({
         type: "POST",
-        url: "https://trustpaddi-waitlist.herokuapp.com/auth/signin",
+        url: "https://web-production-09d2.up.railway.app/auth/signin",
         data: {
           email: email,
           password: password

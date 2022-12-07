@@ -10,7 +10,7 @@ login_button.addEventListener('click', async (e) => {
 
   let user = await axios({
     method: 'post',
-    url: 'https://trustpaddi-waitlist.herokuapp.com/admin/signin',
+    url: 'https://web-production-09d2.up.railway.app/admin/signin',
     data: {
       email: email.value,
       password: password.value
